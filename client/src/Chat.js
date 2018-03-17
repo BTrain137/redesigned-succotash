@@ -11,6 +11,10 @@ class Chat extends React.Component{
             messages: []
         };
 
+        componentDidMount() = {
+            //TODO make initial on load of messages form database
+        }
+
         this.socket = io('localhost:3001');
 
         this.socket.on('RECEIVE_MESSAGE', function(data){
